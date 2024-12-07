@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+
+<head>
+    <title> Job openings app. </title> <!-- browser tab title -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <!-- <style> 
+        h1 {
+            font-size: 50px;
+            font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            font-weight: bolder;
+            color: rgb(47, 27, 120);
+            text-align: center;
+        }
+        h2 {
+            font-size: 40px;
+            font-family: Impact;
+            font-weight: 10;
+            text-align: center;
+        }   
+        
+        /* a class that can be applied anywhere by e.g <div class="someCLass"> etc  */
+        .someCustomClass {
+            font-family: 'Times New Roman', Times, serif;
+            color: teal;
+        }
+        button {
+            font-size: 25px;
+            color-scheme: light;
+            font-style: oblique;
+        }
+        #banner {
+            width: 100%;
+            height: 300px;
+            object-fit: contain;
+        }
+        #container {
+            max-width: 720px;
+            margin: 50px auto;
+        }
+    </style> -->
+    <style>
+        .custom-btn {
+          --bs-btn-bg: #e91e63;
+          --bs-btn-color: #fff;
+          --bs-btn-padding-x: 2.5rem;
+          --bs-btn-padding-y: 1.75rem;
+        }
+      </style>
+</head>
+
+<body> 
+        <div class="container"> 
+            <h1 class="text-center my-5 text-dark" style="font-size: 50px;"> JOB OFFER NETWORK </h1>
+            <div class="text-center">
+                <img class="img-fluid" id="banner" src="http://192.168.0.119:7777/static/banner2.jpeg">
+            </div>
+            <h2 class="text-center my-4"> About us </h2>
+                
+                <p class="someCustomClass"> Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et  magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales sagittis magna. Sed consequat, leo eget bibendum sodales, augue velit cursus nunc,o
+                </p>
+            <h2 class="text-center my-4" style="color: #d86716";> Job positions </h2>
+                <div> 
+                    {% for job in jobs %}
+                        {% include 'jobs_template.html' %} 
+                    {% endfor %}
+                </div>
+            <div style="text-align: center;">
+                <button class="btn custom-btn"> Contact us </button>
+                <button class="btn" style="--bs-btn-bg: #d86716; --bs-btn-color: #ffff"> Contact us </button>
+                <p class="mt-4"> Copyright 2024 </p>
+            </div>
+        </div>
+</body>
